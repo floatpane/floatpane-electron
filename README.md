@@ -32,9 +32,7 @@
 ## 📋 Requirements
 
 - macOS
-- [Node.js](https://nodejs.org/) and npm
 - A `~/wallpapers` directory containing your images.
-- [GitHub CLI](https://cli.github.com/) (only for publishing releases).
 
 ## 🚀 Installation
 
@@ -43,9 +41,12 @@
 ```bash
 brew tap floatpane/floatpane
 brew install floatpane
-# Fix for macOS Gatekeeper
-xattr -cr /Applications/floatpane.app
 ```
+
+Builds (DMG's) are also available [here](https://github.com/floatpane/flotpane/releases).
+
+> [!WARNING]
+> The Builds are not signed with an Apple Developer ID. You need to run `xattr -cr /Applications/floatpane.app` after downloading and before opening it for the first time.
 
 ### For Developers
 
@@ -87,7 +88,7 @@ curl -sS https://andrinoff.com/wallpapers/download.sh | sh
 
 ## 🎨 Available Themes
 
-Floatpane includes a variety of themes to match your style. You can change the theme in the settings (`Cmd+,`).
+Floatpane includes a variety of themes to match your style. You can change the theme in the settings (`Cmd+,`, or by clicking the gear icon).
 
 - Aura
 - Ayu Dark
