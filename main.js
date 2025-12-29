@@ -60,7 +60,7 @@ async function setWallpaper(imagePath) {
 
 function createWindow() {
   const currentDisplay = screen.getDisplayNearestPoint(
-    screen.getCursorScreenPoint()
+    screen.getCursorScreenPoint(),
   );
   const { width, height } = currentDisplay.workAreaSize;
 
@@ -68,8 +68,8 @@ function createWindow() {
   const windowHeight = 1080;
 
   mainWindow = new BrowserWindow({
-    width: windowWidth,
-    height: windowHeight,
+    width,
+    height,
     x: Math.round(currentDisplay.bounds.x + (width - windowWidth) / 2),
     y: Math.round(currentDisplay.bounds.y + (height - windowHeight) / 2),
     webPreferences: {
@@ -170,7 +170,7 @@ ipcMain.handle("get-themes", async () => {
           return JSON.parse(content);
         }
         return null;
-      })
+      }),
     );
     return themes.filter((theme) => theme !== null);
   } catch (error) {
@@ -229,7 +229,7 @@ ipcMain.handle("set-wallpaper", async (event, imageName) => {
 ipcMain.handle("get-current-wallpaper", async () => {
   try {
     return await run(
-      `osascript -e 'tell application "System Events" to tell every desktop to get picture'`
+      `osascript -e 'tell application "System Events" to tell every desktop to get picture'`,
     );
   } catch (error) {
     console.error("Failed to get current wallpaper", error);
@@ -264,7 +264,7 @@ ipcMain.handle("get-thumbnail", async (event, imageName) => {
     } catch (generationError) {
       console.error(
         `Failed to generate thumbnail for ${imageName}:`,
-        generationError
+        generationError,
       );
       throw generationError;
     }
