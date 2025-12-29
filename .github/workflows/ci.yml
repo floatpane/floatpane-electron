@@ -1,0 +1,49 @@
+name: CI — build
+
+# Run on pushes and PRs to verify the project is buildable (npm + webpack)
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  build:
+    name: Build (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["18.x", "20.x"]
+      fail-fast: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Show node / npm versions
+        run: |
+          node --version
+          npm --version
+
+      - name: Install dependencies
+        run: npm ci
+        env:
+          CI: true
+
+      - name: Run build (webpack)
+        run: npm run build
+        env:
+          CI: true
+
+      - name: Show build output (if any)
+        run: |
+          echo "Present files at repo root:"
+          ls -la
+          echo "dist/ (if produced):"
+          ls -la dist || echo "dist not present"
