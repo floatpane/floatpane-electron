@@ -341,17 +341,23 @@ const getStyles = (theme) => ({
     flexDirection: "column",
     overflow: "hidden",
   },
-  gridContainer: { flexGrow: 1, padding: "1rem", overflowY: "hidden" },
+  gridContainer: {
+    flexGrow: 1,
+    padding: "1rem 0.75rem",
+    overflowY: "hidden",
+    marginRight: "0.5rem",
+    marginLeft: "0.5rem",
+  },
   grid: {
     display: "flex",
     flexWrap: "nowrap",
     gap: "1.25rem",
     alignItems: "center",
-    padding: "0.5rem",
+    padding: "0.5rem 1.25rem",
     height: "100%",
     overflowX: "auto",
     scrollbarWidth: "none",
-    // By removing scroll-behavior, the scrolling will now be instant.
+    scrollPaddingInline: "1.25rem",
   },
   gridItem: {
     position: "relative",
