@@ -1,3 +1,16 @@
+## [1.4.10](https://github.com/floatpane/floatpane/compare/v1.4.9...v1.4.10) (2025-12-29)
+
+
+### Bug Fixes
+
+* add lock file ([bd5f957](https://github.com/floatpane/floatpane/commit/bd5f957bee9bbdcb0573e12080929806860e3e43))
+* **deps:** update react monorepo to v19 ([#14](https://github.com/floatpane/floatpane/issues/14)) ([e6c1d37](https://github.com/floatpane/floatpane/commit/e6c1d37eb9af47953473cc19b048e4b9a304ae62))
+* ensure the left-most and right-most selected wallpaper is fully displayed ([a95c0c6](https://github.com/floatpane/floatpane/commit/a95c0c65584d1cc30251579de0eb0d9721e04a27))
+* hide overflow to prevent scroll bars ([ddf69cf](https://github.com/floatpane/floatpane/commit/ddf69cf7a024713745486f6a4dade9d58ed92edb))
+* make the window as big as display ([1831660](https://github.com/floatpane/floatpane/commit/18316600124ded5705e3b4c170af96f7b50be508))
+* sync lockfile ([45a9a06](https://github.com/floatpane/floatpane/commit/45a9a0615dc13333989c14676dd24afe11440e1c))
+* use Lucide React Icons instead of hard coded ([a674265](https://github.com/floatpane/floatpane/commit/a67426506e79631408f05f8e67a43991cfaef69d))
+
 ## [1.4.9](https://github.com/floatpane/floatpane/compare/v1.4.8...v1.4.9) (2025-07-31)
 
 
