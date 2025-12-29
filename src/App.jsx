@@ -76,7 +76,7 @@ const LazyImage = ({
             setImageData(`data:${mimeType};base64,${base64Data}`);
           })
           .catch((err) =>
-            console.error(`Failed to load thumbnail for ${imageName}:`, err)
+            console.error(`Failed to load thumbnail for ${imageName}:`, err),
           );
       }
     });
@@ -226,7 +226,7 @@ const App = () => {
           break;
         case "ArrowDown":
           setSelectedIndex((prev) =>
-            Math.min(wallpapers.length - 1, prev + gridCols)
+            Math.min(wallpapers.length - 1, prev + gridCols),
           );
           break;
         case "ArrowLeft":
@@ -254,7 +254,7 @@ const App = () => {
   useEffect(() => {
     if (wallpapers.length > 0 && wallpapers[selectedIndex]) {
       const element = document.getElementById(
-        `wallpaper-${wallpapers[selectedIndex]}`
+        `wallpaper-${wallpapers[selectedIndex]}`,
       );
       // Use 'auto' to scroll instantly to the selected item.
       element?.scrollIntoView({ behavior: "auto", block: "nearest" });
@@ -332,7 +332,7 @@ const App = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   window.api.openExternalLink(
-                    "https://github.com/floatpane/floatpane"
+                    "https://github.com/floatpane/floatpane",
                   );
                   window.api.hideWindow();
                 }}
@@ -388,7 +388,7 @@ const getStyles = (theme) => ({
     flexDirection: "column",
     overflow: "hidden",
   },
-  gridContainer: { flexGrow: 1, padding: "1rem", overflowY: "auto" },
+  gridContainer: { flexGrow: 1, padding: "1rem", overflowY: "hidden" },
   grid: {
     display: "flex",
     flexWrap: "nowrap",
