@@ -1,9 +1,7 @@
 name: Release and Update Homebrew Cask
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   release:
