@@ -1,3 +1,10 @@
+## [1.4.11](https://github.com/floatpane/floatpane/compare/v1.4.10...v1.4.11) (2025-12-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @semantic-release/github to v12 ([#35](https://github.com/floatpane/floatpane/issues/35)) ([bd3ecfe](https://github.com/floatpane/floatpane/commit/bd3ecfef26b79265a26cb5718da1b78b0b0e8a62))
+
 ## [1.4.10](https://github.com/floatpane/floatpane/compare/v1.4.9...v1.4.10) (2025-12-29)
 
 
