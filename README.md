@@ -1,3 +1,9 @@
+> [!WARNING]
+> **THIS VERSION IS NO LONGER MAINTAINED. NEW VERSIONS ARE AT [floatpane/floatpane](https://github.com/floatpane/floatpane)**
+
+
+
+
 # floatpane
 
 <p align="center">
@@ -7,8 +13,8 @@
 <h3 align="center">A lightweight, floating wallpaper selector for macOS.</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/floatpane/floatpane?style=for-the-badge" alt="Version">
-  <img src="https://img.shields.io/github/license/floatpane/floatpane?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/github/v/release/floatpane/floatpane-electron?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/github/license/floatpane/floatpane-electron?style=for-the-badge" alt="License">
 </p>
 
 ---
